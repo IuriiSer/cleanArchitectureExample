@@ -1,0 +1,78 @@
+# How to USE
+#..................................
+# 1-> change fileName -> .env
+# 2-> change entity for DB CONFIG
+
+# PROFILE
+#..................................
+DEFAULT_CREATE_STATUS = profile_new
+
+# COMMON.
+#..................................
+D30 = 2592000000
+H4 = 14400000
+H2 = 7200000
+M30 = 1800000
+
+# Environment VARIABLES.
+#..................................
+NODE_ENV  = development 
+DEV_PORT  = 3100 #Development port 
+PROD_PORT = 80   #Production port 
+
+# TOKENS.
+#..................................
+TOKEN_SECRET = some_token_secret
+TOKEN_REF_ALIVE = $D30
+TOKEN_ACC_ALIVE = $M30
+
+# SESSIONS.
+#..................................
+SESSION_USER_SECRET = some_session_secret
+SESSION_USER_ALIVE = $TOKEN_REF_ALIVE
+
+# CACHE.
+#..................................
+CACHE_STATIC_DATA_ALIVE = $H4
+CACHE_TOKEN_REFR_ALIVE = $TOKEN_REF_ALIVE
+CACHE_USER_DATA_ALIVE = $H2
+
+
+#RESTRICTION FOR DB
+USER_EMAIL_LENGTH           = 100
+USER_PASSWORD_LENGTH_MIN    = 8
+USER_PASSWORD_LENGTH        = 100
+USER_NAME_LENGTH            = 100
+USER_ABOUT_LENGTH           = 300
+USER_HOBBIES_LENGTH         = 300
+USER_NICKNAME_LENGTH        = 30
+USER_NICKNAME_LENGTH_MIN    = 6
+USER_AGE_MAX                = 120
+USER_AGE_MIN                = 18
+
+EVENT_TYPE_NAME_LENGTH_MAX  = 60
+
+EVENT_TITLE_LENGTH = 40
+EVENT_COORDINATES_LENGTH = 19
+EVENT_DESCRIPTION_LENGTH = 255
+
+MESSAGE_CONTENT_LENGTH = 255
+
+REVIEW_EVENT_DESCRIPTION_LENGTH = 255
+
+STATUS_NAME_LENGTH = 100
+
+
+# DB CONFIG FOR DEVELOPMENT
+#..................................
+DEV_DB_HOST     = localhost 
+DEV_DB_USERNAME = iurii
+DEV_DB_PASSWORD = admin
+DEV_DB_DATABASE = meetupMovie 
+DEV_DB_DIALECT  = postgres
+
+PROD_DB_HOST     = localhost 
+PROD_DB_USERNAME = DB_USERNAME
+PROD_DB_PASSWORD = DB_PASSWORD
+PROD_DB_DATABASE = DB_DATABASE 
+PROD_DB_DIALECT  = postgres
